@@ -1,0 +1,108 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font:  sans-serif;
+  }
+ body {
+    font-size: 32px;
+    background-color: blue
+  } 
+
+  
+.kk {
+    
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height: 40vh;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+  }
+
+  
+  .container {
+    width: 800px;
+    max-width: 80%;
+    background-color: rgb(36, 76, 255);
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+  }
+  
+  .btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .btn {
+    border: 1px solid #ccc;
+    background-color: blue;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: rgb(10, 10, 10);
+    outline: none;
+  }
+  
+  .btn:hover {
+    border-color: black;
+  }
+  
+
+  .start-btn, .next-btn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hide {
+    display: none;
+  }
+
+  .youtube-audio {
+    border: 1px solid rgb(0, 0, 0);
+    background-color: blue;
+    border-radius: 1px;
+    padding: 1px 1px;
+    color: rgb(8, 8, 8);
+    outline: none;
+    text-align: center;
+  }
+  .youtube-audio:hover {
+    border-color: rgb(216, 193, 193);
+    cursor: pointer;
+    background-color: rgb(20, 20, 238);
+
+  }
+
+.question{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-align: center;
+    
+}
+.puntaje{
+    font:  sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-align: center;
+
+}
+
+.titulo {
+    font:  sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding: 10px 10px;
+    text-align: center;
+}
