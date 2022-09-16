@@ -10,9 +10,9 @@ if (maximoPuntaje == null) {
 }
 puntaje = document.getElementById('puntaje')
 puntajeactual = 0
-puntaje.innerHTML = `   <p>Nivel  Inicial  </p>
-                     <p>Highscore: ` + maximoPuntaje + ` </p>
-                    <p>Score: ` + puntajeactual + ` </p>  ` 
+puntaje.innerHTML = `  <p class="titulo2">Nivel  Inicial  </p>
+                     <p class="titulo2">Highscore: ` + maximoPuntaje + ` </p>
+                    <p class="titulo2" >Score: ` + puntajeactual + ` </p>  ` 
 
 
 let musica = document.getElementById('youtube-audio');
@@ -81,11 +81,11 @@ function showQuestion(question) {
         if (maximoPuntaje <= puntajeactual) { 
           maximoPuntaje = puntajeactual
           localStorage.setItem('maximoPuntaje', puntajeactual)
-          puntaje.innerHTML = `  <p>Highscore: ` + maximoPuntaje + ` </p>
-          <p>Score: ` + puntajeactual + ` </p>  ` 
+          puntaje.innerHTML = `  <p class="titulo2" >Highscore: ` + maximoPuntaje + ` </p>
+          <p class="titulo2" >Score: ` + puntajeactual + ` </p>  ` 
         }
-        puntaje.innerHTML = `  <p>Highscore: ` + maximoPuntaje + ` </p>
-        <p>Score: ` + puntajeactual + ` </p>  `       
+        puntaje.innerHTML = `  <p class="titulo2" >Highscore: ` + maximoPuntaje + ` </p>
+        <p class="titulo2">Score: ` + puntajeactual + ` </p>  `       
         
       }
       
@@ -98,7 +98,7 @@ function showQuestion(question) {
       if (puntajeactual == 10) {
         shuffledQuestions = medio.sort(() => Math.random() - .5)
         currentQuestionIndex = 0
-        puntaje.innerHTML += `  <p>Nivel: Medio  </p> `
+        puntaje.innerHTML += `  <p class="titulo2" >Nivel: Medio  </p> `
         
 
         
@@ -106,21 +106,21 @@ function showQuestion(question) {
       else if (puntajeactual == 20) {
         shuffledQuestions = dificil.sort(() => Math.random() - .5)
         currentQuestionIndex = 0
-        puntaje.innerHTML += `  <p>Nivel: Dificil  </p> `
+        puntaje.innerHTML += `  <p class="titulo2" >Nivel: Dificil  </p> `
 
       
       }
       else if (puntajeactual == 30) {
         shuffledQuestions = epico.sort(() => Math.random() - .5)
         currentQuestionIndex = 0
-        puntaje.innerHTML += `  <p>Nivel: Epico  </p> `
+        puntaje.innerHTML += `  <p class="titulo2">Nivel: Epico  </p> `
 
 
       }
       else if (puntajeactual == 40) {
         currentQuestionIndex = 0      
         shuffledQuestions = extremo.sort(() => Math.random() - .5)
-        puntaje.innerHTML += `  <p>Nivel: Extremo  </p> `
+        puntaje.innerHTML += `  <p class="titulo2" >Nivel: Extremo  </p> `
     
 
       }
@@ -161,26 +161,26 @@ const questions = [
   {
     question: " ¿Qué animales son Tom y Jerry?",
     answers: [
-      { text: 'Perro y Raton', correct: false },
-      { text: 'Camaron y Gato', correct: false },
-      { text: 'Gato y Raton', correct: true },
-      { text: 'Perro y Gato', correct: false }
+      { text: 'Perro y ratón', correct: false },
+      { text: 'Camarón y gato', correct: false },
+      { text: 'Gato y ratón', correct: true },
+      { text: 'Perro y gato', correct: false }
     ]
   },
   {
     question: "¿Cómo se llama una forma con ocho lados?",
     answers: [
-      { text: 'Octagono', correct: true },
-      { text: 'Triangulo', correct: false },
+      { text: 'Octágono', correct: true },
+      { text: 'Triángulo', correct: false },
       { text: 'Cuadrado', correct: false },
-      { text: 'Hexagono', correct: false }
+      { text: 'Hexágono', correct: false }
 
 
  
     ]
   },
   {
-    question: " Qué mes tiene 28 días?",
+    question: " ¿Qué mes tiene 28 días?",
     answers: [
       { text: 'Febrero', correct: true },
       { text: 'Marzo', correct: false },
@@ -199,7 +199,7 @@ const questions = [
     ]
   }, 
   {
-    question: " En qué continente está Estados Unidos?",
+    question: " ¿En qué continente está Estados Unidos?",
     answers: [
       { text: 'Europa', correct: false },
       { text: 'Asia', correct: false },
@@ -208,62 +208,12 @@ const questions = [
     ]
  
   },
-  {
-    question: " ¿Qué animales son Tom y Jerry?",
-    answers: [
-      { text: 'Perro y Raton', correct: false },
-      { text: 'Camaron y Gato', correct: false },
-      { text: 'Gato y Raton', correct: true },
-      { text: 'Perro y Gato', correct: false }
-    ]
-  },
-  {
-    question: "¿Cómo se llama una forma con ocho lados?",
-    answers: [
-      { text: 'Octagono', correct: true },
-      { text: 'Triangulo', correct: false },
-      { text: 'Cuadrado', correct: false },
-      { text: 'Hexagono', correct: false }
-
-
- 
-    ]
-  },
-  {
-    question: " Qué mes tiene 28 días?",
-    answers: [
-      { text: 'Febrero', correct: true },
-      { text: 'Marzo', correct: false },
-      { text: 'Ninguno', correct: false },
-      { text: 'Diciembre', correct: false }
-    ]
-  },
-  {
-    question: " ¿Cuántos enanos tenía Blancanieves?",
-    answers: [
-      { text: '6', correct: false },
-      { text: '8', correct: false },
-      { text: '7', correct: true },
-      { text: '9', correct: false }
-      
-    ]
-  }, 
-  {
-    question: " En qué continente está Estados Unidos?",
-    answers: [
-      { text: 'Europa', correct: false },
-      { text: 'Asia', correct: false },
-      { text: 'América', correct: true },
-      { text: 'África', correct: false }
-    ]
- 
-  }
 ]
 
 const medio = [
 
   {
-    question:  "¿En Los tres cerditos, ¿de qué está hecha la casa más fuerte?",
+    question:  "En Los tres cerditos, ¿de qué está hecha la casa más fuerte?",
     answers: [
       { text: 'Madera', correct: false },
       { text: 'Ladrillo', correct: true },
@@ -275,7 +225,7 @@ const medio = [
     question: "¿Qué servicio de correo electrónico es propiedad de Microsoft?",
     answers: [
       { text: 'Gmail', correct: false },
-      { text: 'picante', correct: true },
+      { text: 'Picante', correct: true },
       { text: 'Yahoo', correct: false },
       { text: 'Outlook', correct: true }
 
@@ -445,8 +395,8 @@ const extremo = [
     question: "¿Cuál es el ave de mayor envergadura que sigue viva actualmente?",
     answers: [
       { text: 'Albatros', correct: true },
-      { text: 'Aguila', correct: false },
-      { text: 'Condor', correct: false },
+      { text: 'Águila', correct: false },
+      { text: 'Cóndor', correct: false },
       { text: 'Gaviota', correct: false }
     ]
   },
@@ -467,9 +417,9 @@ const extremo = [
     ]
   },
   {
-    question: "Cómo se llama el tipo de célula nerviosa más abundante en el cerebro humano?",
+    question: "¿Cómo se llama el tipo de célula nerviosa más abundante en el cerebro humano?",
     answers: [
-      { text: 'Celula gliales', correct: true },
+      { text: 'Celula glial', correct: true },
       { text: 'Celula epitelial', correct: false },
       { text: 'Celula muscular', correct: false },
       { text: 'Celula sanguínea', correct: false }
@@ -488,7 +438,7 @@ const extremo = [
         ]
       },
       {
-        question: " ¿Qué deportista español se proclamó Campeón de las Series Mundiales de Ultra Runnning en tres años consecutivos de 2012 a 2014?",
+        question: " ¿Qué deportista español se proclamó Campeón de las Series Mundiales de Ultra Running en tres años consecutivos de 2012 a 2014?",
         answers: [
           
           { text: 'Pau Capell', correct: false },
