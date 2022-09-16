@@ -4,7 +4,8 @@
   }
  body {
     font-size: 32px;
-    background-color: blue
+    
+    background-image: url("img/fondo.jpg");
   } 
 
   
@@ -17,17 +18,17 @@
     height: 40vh;
     justify-content: center;
     align-items: center;
-    background-color: blue;
   }
 
   
   .container {
     width: 800px;
     max-width: 80%;
-    background-color: rgb(36, 76, 255);
+    background-color:rgb(5, 5, 5);
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 0 10px 2px;
+    color: rgb(255, 72, 0);
   }
   
   .btn-grid {
@@ -38,7 +39,7 @@
   }
   
   .btn {
-    background-color: blue;
+    background-color: rgb(255, 72, 0);
     border-radius: 5px;
     padding: 5px 10px;
     color: rgb(10, 10, 10);
@@ -67,21 +68,6 @@
     display: none;
   }
 
-  .youtube-audio {
-    border: 1px solid rgb(0, 0, 0);
-    background-color: blue;
-    border-radius: 1px;
-    padding: 1px 1px;
-    color: rgb(8, 8, 8);
-    outline: none;
-    text-align: center;
-  }
-  .youtube-audio:hover {
-    border-color: rgb(216, 193, 193);
-    cursor: pointer;
-    background-color: rgb(20, 20, 238);
-
-  }
 
 .question{
     font-size: 1.5rem;
@@ -101,8 +87,58 @@
 
 .titulo {
     font:  sans-serif;
-    font-size: 2.5rem;
+    font-size: 1.9rem;
     font-weight: bold;
     padding: 10px 10px;
     text-align: center;
+    color: rgb(2, 2, 2);
+    
+    
+}
+.titulo1 {
+  font:  sans-serif;
+  font-size: 2.9rem;
+  text-align: center;
+  color:  rgb(255, 72, 0);
+  background-color: rgb(5, 5, 5);
+  border-radius: 55px;
+  margin: 10px;
+  box-shadow: 0 0 10px 2px;
+  width: 800px;
+  float: center;
+  
+  
+}
+.controls1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.titulo2 {
+  font:  sans-serif;
+  font-size: 1.7rem;
+  text-align: center;
+  color:  rgb(17, 17, 17);
+  background-color: rgb(241, 234, 234);
+  margin: 10px;
+  width: 300px;
+  float: center;
+  
+  
+}
+
+.yutu {
+  background-color: rgb(255, 72, 0);
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: rgb(10, 10, 10);
+  outline: none;
+  border-radius: 50px;
+  box-shadow: 0 0 20px 20px;
+  font-size: 1.7rem;
+}
+
+.yutu:hover {
+  border: 1px solid #ccc;
+  border-color: rgb(238, 232, 232);
 }
